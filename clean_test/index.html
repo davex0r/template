@@ -1,0 +1,60 @@
+<!doctype html>
+
+<head>
+  <script src="https://distill.pub/template.v2.js"></script>
+  <!-- load the distil formatting script from their server -->
+</head>
+
+<d-title>
+  <h1>Test Distill Header</h1>
+  <p>Test Distill Short Abstract</p>
+</d-title>
+
+<body>
+
+  <d-front-matter>
+    <script id='distill-front-matter' type="text/json">{
+      "title": "Title",
+      "description": "Description",
+      "published": "Jan 29, 2017",
+      "authors": [
+        {
+          "author":"David Jordan",
+          "authorURL":"http://foo.org/",
+          "affiliations": [{"name": "The Gurdon Institute", "url": "http://www.gurdon.cam.ac.uk"}]
+        }
+      ],
+      "katex": {
+        "delimiters": [
+          {"left": "$$", "right": "$$", "display": false}
+        ]
+      }
+    }</script>
+  </d-front-matter>
+
+  <d-article>
+      <d-code block language="javascript">
+        var x = 25;
+        function(x){
+          return x * x;
+        }
+      </d-code>
+      <aside>Some text in an aside, margin notes, etc...</aside>
+
+      <d-math block>
+        c = \pm \sqrt{ \sum_{i=0}^{n}{a^{222} + b^2}}
+      </d-math>
+      <p>Test Citation <d-cite key="jordan2013behavioral"></d-cite> here</p>
+
+      <p>We should also be testing footnotes<d-footnote>This will become a hoverable footnote.</d-footnote>.</p>
+    </d-article>
+
+    <d-appendix>
+      <h3>Contributions</h3>
+      <p>Some text describing who did what.</p>
+      <h3>Reviewers</h3>
+      <p>Some text with links describing who reviewed the article.</p>
+      <d-bibliography src="./bibliography.bib"></d-bibliography>
+    </d-appendix>
+
+</body>
